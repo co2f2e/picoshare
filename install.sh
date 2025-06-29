@@ -46,7 +46,7 @@ sudo mkdir -p "$INSTALL_DIR"
 cd "$INSTALL_DIR" || exit 1
 
 echo "正在下载 PicoShare 安装包..."
-wget "$URL" -O "$ARCHIVE" || { echo "❌ 下载失败"; exit 1; }
+wget "$URL" -O "$ARCHIVE" || { echo "下载失败"; exit 1; }
 
 echo "解压安装包..."
 tar -xzf "$ARCHIVE" && rm -f "$ARCHIVE"
