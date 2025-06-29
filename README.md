@@ -37,5 +37,15 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/picoshare/main/uninstal
         tcp_nopush on; #优化大文件传输
     }
 ```
+## 服务管理命令
+| 操作         | 命令                                                        |
+|--------------|-------------------------------------------------------------|
+| 启动服务     | ```sudo systemctl start picoshare```                      |
+| 停止服务     | ```sudo systemctl stop picoshare```                       |
+| 重启服务     | ```sudo systemctl restart picoshare```                    |
+| 查看状态     | ```sudo systemctl status picoshare```                     |
+| 查看日志     | ```sudo journalctl -u picoshare -f```                     |
+| 开机自启动   | ```sudo systemctl enable picoshare```                     |
+| 关闭开机启动 | ```sudo systemctl disable picoshare```                    |
 
 [官方demo](https://demo.pico.rocks/)
