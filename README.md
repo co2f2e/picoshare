@@ -8,5 +8,24 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/picoshare/main/install.
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/picoshare/main/uninstall.sh) 
 ```
+## NGINX配置
+```
+    location ~ ^/-[-_A-Za-z0-9]+/.+ {
+        proxy_pass http://localhost:12345;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_hide_header Content-Disposition;
+        add_header Content-Disposition 'attachment' always;
+    }  
+    location / {
+        proxy_pass http://localhost:12345;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+```
 
 [官方demo](https://demo.pico.rocks/)
