@@ -1,5 +1,5 @@
 #!/bin/bash
-
+clear
 VERSION=$(curl -s https://api.github.com/repos/mtlynch/picoshare/releases/latest | grep tag_name | cut -d '"' -f4)
 VERSION_SHORT="${VERSION#v}"
  VERSION="v$VERSION"
