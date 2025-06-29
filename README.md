@@ -8,3 +8,5 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/picoshare/main/install.
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/picoshare/main/uninstall.sh) 
 ```
+
+[官方demo](https://demo.pico.rocks/)
