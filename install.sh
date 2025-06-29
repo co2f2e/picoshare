@@ -2,6 +2,7 @@
 
 VERSION=$(curl -s https://api.github.com/repos/mtlynch/picoshare/releases/latest | grep tag_name | cut -d '"' -f4)
 VERSION_SHORT="${VERSION#v}"
+ VERSION="v$VERSION"
 INSTALL_DIR="/usr/local/PicoShare"
 DATA_DIR="${INSTALL_DIR}/data"
 BIN="picoshare"
@@ -22,7 +23,7 @@ if ! [[ "$PORT" =~ ^[0-9]+$ ]] || [ "$PORT" -lt 1024 ] || [ "$PORT" -gt 65535 ];
 fi
 
 if [ ${#SECRET} -lt 6 ]; then
-  echo "密码太短，至少使用 8 位字符。"
+  echo "密码太短，至少使用 6 位字符。"
   exit 1
 fi
 
