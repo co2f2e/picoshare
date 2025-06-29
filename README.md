@@ -30,6 +30,9 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/picoshare/main/uninstal
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
+        client_max_body_size 2G; #设置单个上传文件最大限制
+        sendfile on; #启用 sendfile 提高文件传输性能
+        tcp_nopush on; #优化大文件传输
     }
 ```
 
