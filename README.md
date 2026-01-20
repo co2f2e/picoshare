@@ -2,8 +2,6 @@
   picoshare
 </h1>
 
-<hr>
-
 ## Installation
 * In this example:
   - The service will run on port 12345
@@ -11,10 +9,12 @@
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/picoshare/main/install.sh) 12345 password
 ```
+
 ## Uninstallation
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/picoshare/main/uninstall.sh) 
 ```
+
 ## Nginx Configuration
 ```nginx
     location ~ ^/-[-_A-Za-z0-9]+/.+ {
