@@ -7,12 +7,12 @@
   - The service will run on port 12345
   - The login password will be password
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/picoshare/main/install.sh) 12345 password
+bash <(curl -Ls https://raw.githubusercontent.com/Meokj/picoshare/main/install.sh) 12345 password
 ```
 
 ## Uninstallation
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/picoshare/main/uninstall.sh) 
+bash <(curl -Ls https://raw.githubusercontent.com/Meokj/picoshare/main/uninstall.sh) 
 ```
 
 ## Nginx Configuration
